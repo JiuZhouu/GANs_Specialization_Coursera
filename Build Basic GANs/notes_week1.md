@@ -30,17 +30,16 @@ adversarial：对抗性的
 
 ### 4、Discriminator
 Classifiers：区分不同的class，分类器。  
-1.jpg  
-Y:Class, X:Features    
+![1](https://raw.githubusercontent.com/JiuZhouu/ImageBed/main/mac/202210311020748.png)Y:Class, X:Features    
 P(Y|X) 求的是条件概率     
 Discriminator：P(class|feature) class=True/False,feature->images    
 是分类器的一种，学习通过特征X输出类别Y的概率，对generator形成反馈。  
 
 ### 5、Generator
 噪声向量--输入到神经网络--输出图片，每次生成的图片可能都是不一样的。  
-2.jpg  
+![2](https://raw.githubusercontent.com/JiuZhouu/ImageBed/main/mac/202210311020344.png)
 Generator：P(X|Y) = P(features|class) 求的是条件概率  
-通过P(X)模拟可能的真实的猫的分布P，更有可能生成数据集里那些常见的猫（因为他们的特征更普遍）。
+通过P(X)模拟可能的真实的猫的分布P，更有可能生成数据集里那些常见的猫（因为他们的特征更普遍)。
 Generator会从数据集里学习特征X的分布，为了每次生成不同的图像会在输入添加随机特征。
 
 ### 6、BCE Cost Function
